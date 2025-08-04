@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Games</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="wave-wrapper">
+      <svg class="wave-bob" viewBox="0 0 1440 320" preserveAspectRatio="none">
+        <path id="wave-path" fill="var(--wave-color)" d="M0,224L30,197.3C60,171,120,117,180,117.3C240,117,300,171,360,176C420,181,480,139,540,112C600,85,660,75,720,101.3C780,128,840,192,900,202.7C960,213,1020,171,1080,144C1140,117,1200,107,1260,106.7C1320,107,1380,117,1410,122.7L1440,128L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path>
+      </svg>
+    </div>
+
+    <h1 id="top-header">Welcome to HayHay's vibe zone!</h1>
+
+    <div id="love-note" class="fade-in" style="font-family: 'Dancing Script', cursive; font-size: 2rem; text-align: center; margin-top: 10px; padding: 10px 20px; color: #e91e63;">
+      💌 Loading something sweet...
+    </div>
+
+    <div id="countdown" style="text-align: center; font-size: 1.2rem; margin-top: 20px;"></div>
+
+    <div class="spotify-toggle">
+      <button onclick="toggleSpotify()">🎵 Toggle Music</button>
+    </div>
+
+    <div class="spotify-widget" id="spotifyPlayer">
+      <iframe style="border-radius:12px"
+        src="https://open.spotify.com/embed/playlist/2aAKPdwmDdBYWw3EAanKxp?utm_source=generator"
+        width="304" 
+        height="152"
+        frameborder="0"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+        loading="lazy">
+      </iframe>
+    </div>
+
+    <div class="theme-toggle" onclick="toggleSettings()">⚙️</div>
+
+    <div class="tooltip-popup" id="settings-tooltip">
+      Click here to customize the theme! 💖
+    </div>
+
+    <div class="settings-panel" id="settingsPanel">
+        <h2>🎨 Theme</h2>
+
+        <label for="bgColor">Background</label>
+        <input type="color" id="bgColor" onchange="updateTheme()" />
+
+        <label for="textColor">Text</label>
+        <input type="color" id="textColor" onchange="updateTheme()" />
+
+        <label for="waveColor">Wave Color</label>
+        <input type="color" id="waveColor" onchange="updateTheme()" />
+
+        <button onclick="resetTheme()">Reset</button>
+    </div>
+
+    <section class="game-gallery">
+        <h2>🎮 Your Favorite Games 🎮</h2>
+        <div class="image-grid">
+            <a href="https://66ez.cc/" target="_blank" class="image-card">
+                <img src="Screenshots\Screenshot 2025-08-03 013147.png" alt="Game 1">
+                <span>66ez</span>
+            </a>
+            <a href="https://www.coolmathgames.com/0-fireboy-and-water-girl-in-the-forest-temple" target="_blank" class="image-card">
+                <img src="Screenshots\Screenshot 2025-08-03 122026.png" alt="Game 2">
+                <span>Fireboy and Watergirl</span>
+            </a>
+            <a href="https://www.roblox.com/" target="_blank" class="image-card">
+                <img src="Screenshots\Screenshot 2025-08-03 122401.png" alt="Game 3">
+                <span>Roblox</span>
+            </a>
+        </div>
+      </section>
+
+      <section class="link-gallery">
+        <h2>💵 Shopping 💵</h2>
+        <div class="image-grid">
+            <a href="https://www.abercrombie.com/shop/us" target="_blank" class="image-card">
+              <img src="Screenshots/Screenshot 2025-08-03 123952.png" alt="Link 1">
+              <span>Abercrombie</span>
+            </a>
+            <a href="https://francescas.com/?srsltid=AfmBOopZQyv9hS3WUBfLXGAck4ifINZO7DFVOZ9Q1AAejBiJ6Cj2YioI" target="_blank" class="image-card">
+              <img src="Screenshots/Screenshot 2025-08-03 124256.png" alt="Link 2">
+              <span>Francescas</span>
+            </a>
+            <a href="https://www.garageclothing.com/us/?srsltid=AfmBOoq3wlafIlgSzz3eYvJ1J31BMhDEOSqYusmUxxrGTRV-6fjYjQdQ" target="_blank" class="image-card">
+              <img src="Screenshots/Screenshot 2025-08-03 124527.png" alt="Link 3">
+              <span>Garage</span>
+            </a>
+            <a href="https://www.hollisterco.com/shop/us" target="_blank" class="image-card">
+              <img src="Screenshots/Screenshot 2025-08-03 124702.png" alt="Link 4">
+              <span>Hollister</span>
+            </a>
+            <a href="https://www.tillys.com/?srsltid=AfmBOooPaklS7FKzzvbMTgE5ByAdd_H0N53AXmhNx9WlXdd8tDIXygnO" target="_blank" class="image-card">
+              <img src="Screenshots/Screenshot 2025-08-03 123348.png" alt="Link 5">
+              <span>Tillys</span>
+            </a>
+            <a href="https://www.urbanoutfitters.com/" target="_blank" class="image-card">
+              <img src="Screenshots/Screenshot 2025-08-03 123648.png" alt="Link 6">
+              <span>Urban</span>
+            </a>
+        </div>
+      </section>
+
+      <section>
+
+      <section class="misc-gallery">
+          <h2>🎮 Other links! 🎮</h2>
+          <div class="image-grid">
+              <a href="https://www.pinterest.com/" target="_blank" class="image-card">
+                  <img src="Screenshots/Screenshot 2025-08-03 135313.png" alt="Misc 1">
+                  <span>Pintrest</span>
+              </a>
+              <a href="https://www.youtube.com/" target="_blank" class="image-card">
+                  <img src="Screenshots/Screenshot 2025-08-03 135851.png" alt="Misc 2">
+                  <span>Youtube</span>
+              </a>
+              <a href="https://portal.csuchico.edu/uPortal/f/u18l1s4/normal/render.uP" target="_blank" class="image-card">
+                  <img src="Screenshots/Screenshot 2025-08-03 140108.png" alt="Misc 3">
+                  <span>Homework Portal</span>
+              </a>
+          </div>
+        </section>
+
+</body>
+
+<script>
+  const loveNotes = [
+    "You're my sunshine on a cloudy day. ☀️",
+    "Every moment with you is my favorite. 💗",
+    "You're the sparkle in my universe. ✨",
+    "I love you more than winco!. 💖",
+    "Rawrxd 🐺",
+    "You're the reason I smile so much. 😊",
+    "Being with you is my happy place. 🏡💞",
+    "You're my favorite person, always. 💕"
+  ];
+
+  function showRotatingLoveNote() {
+    const note = document.getElementById("love-note");
+    const newNote = loveNotes[Math.floor(Math.random() * loveNotes.length)];
+    note.classList.remove("fade-in");
+    void note.offsetWidth;
+    note.textContent = newNote;
+    note.classList.add("fade-in");
+  }
+
+  showRotatingLoveNote();
+  setInterval(showRotatingLoveNote, 10000);
+
+  function applyTheme(bgColor, textColor, waveColor) {
+    document.documentElement.style.setProperty('--bg-color', bgColor);
+    document.documentElement.style.setProperty('--text-color', textColor);
+    document.documentElement.style.setProperty('--wave-color', waveColor);
+  }
+
+  function updateTheme() {
+    const bgColor = document.getElementById('bgColor').value;
+    const textColor = document.getElementById('textColor').value;
+    const waveColor = document.getElementById('waveColor').value;
+
+    localStorage.setItem('bgColor', bgColor);
+    localStorage.setItem('textColor', textColor);
+    localStorage.setItem('waveColor', waveColor);
+
+    applyTheme(bgColor, textColor, waveColor);
+    adjustLoveNoteContrast(bgColor);
+  }
+
+
+  function adjustLoveNoteContrast(bgColor) {
+    const note = document.getElementById("love-note");
+    const rgb = hexToRgb(bgColor);
+    const brightness = (rgb.r * 299 + rgb.g * 587 + rgb.b * 114) / 1000;
+
+    if (brightness > 180) {
+      note.style.color = '#c2185b';
+      note.style.textShadow = 'none';
+    } else {
+      note.style.color = '#ff69b4';
+      note.style.textShadow = '1px 1px 4px black';
+    }
+  }
+
+  function hexToRgb(hex) {
+    const cleaned = hex.replace('#', '');
+    const bigint = parseInt(cleaned, 16);
+    return {
+      r: (bigint >> 16) & 255,
+      g: (bigint >> 8) & 255,
+      b: bigint & 255
+    };
+  }
+
+  function resetTheme() {
+    const defaultBg = 'white';
+    const defaultText = 'black';
+    const defaultWave = 'white';
+
+    localStorage.removeItem('bgColor');
+    localStorage.removeItem('textColor');
+    localStorage.removeItem('waveColor');
+
+    document.getElementById('bgColor').value = defaultBg;
+    document.getElementById('textColor').value = defaultText;
+    document.getElementById('waveColor').value = defaultWave;
+
+    applyTheme(defaultBg, defaultText, defaultWave);
+  }
+
+  function toggleSettings() {
+    const panel = document.getElementById('settingsPanel');
+    panel.classList.toggle('show');
+  }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const tooltip = document.getElementById('settings-tooltip');
+    tooltip.classList.add('show');
+
+    setTimeout(() => {
+      tooltip.classList.remove('show');
+    }, 10000);
+  });
+
+  window.onload = () => {
+    const savedBg = localStorage.getItem('bgColor') || rgb(250, 158, 192);
+    const savedText = localStorage.getItem('textColor') || rgb(109, 55, 139);
+    const savedWave = localStorage.getItem('waveColor') || rgb(135, 237, 230);
+
+    document.getElementById('bgColor').value = savedBg;
+    document.getElementById('textColor').value = savedText;
+    document.getElementById('waveColor').value = savedWave;
+
+    applyTheme(savedBg, savedText, savedWave);
+
+    adjustLoveNoteContrast(savedBg);
+
+    const cards = document.querySelectorAll('.image-card');
+    cards.forEach(card => card.classList.remove('animate'));
+
+    cards.forEach((card, index) => {
+      setTimeout(() => {
+        card.classList.add('animate');
+      }, index * 200);
+    });
+  };
+
+  function updateCountdown() {
+    const targetDate = new Date(2025,7,12, 13, 0);
+    const now = new Date();
+    const diff = targetDate - now;
+
+    if (diff > 0) {
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      document.getElementById("countdown").innerText = `🎉 ${days} days until we are together! 🎉`;
+    } else {
+      document.getElementById("countdown").innerText = `💖 It's today!! 💖`;
+    }
+  }
+  updateCountdown();
+
+  function toggleSpotify() {
+    const player = document.getElementById("spotifyPlayer");
+    player.classList.toggle("spotify-hidden");
+  }
+</script>
+</html>
